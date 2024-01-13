@@ -16,15 +16,18 @@
     "expo": "^49.0.21",
     "expo-app-loading": "^2.1.1",
     "expo-font": "~11.4.0",
-    "expo-splash-screen": "^0.10.3",
+    "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
-    "react-native": "^0.72.6"
+    "react-native": "^0.72.6",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/react": "~18.2.14",
     "@types/react-native": "^0.73.0",
+    "@types/styled-components": "^5.1.34",
+    "@types/styled-components-react-native": "^5.2.5",
     "babel-plugin-module-resolver": "^5.0.0",
     "typescript": "^5.1.3"
   },

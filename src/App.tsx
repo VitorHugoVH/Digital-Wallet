@@ -1,6 +1,7 @@
 import React from 'react';
-import AppLoading from "expo-app-loading";
+import { StatusBar } from 'expo-status-bar';
 import { View, Text } from 'react-native';
+import { ThemeProvider } from "styled-components/native";
 
 import {
   useFonts,
@@ -14,6 +15,8 @@ import {
 import { DMSans_400Regular } from "@expo-google-fonts/dm-sans";
 import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display';
 
+import COLORS from "../src/styles/theme";
+
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
     Poppins_300Light,
@@ -25,14 +28,22 @@ const App: React.FC = () => {
     DMSerifDisplay_400Regular,
   });
 
-  if (!fontsLoaded) {
-    return <AppLoading />
-  }
-
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Seja Bem Vindo!</Text>
-    </View>
+    <ThemeProvider theme={COLORS}>
+      <StatusBar
+        style="dark"
+        translucent
+        backgroundColor='transparent'
+      />
+
+      <View style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}>
+        <Text>Seja Bem Vindo!</Text>
+      </View>
+    </ThemeProvider>
   );
 };
 
